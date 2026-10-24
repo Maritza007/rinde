@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'screens/splash_page.dart';
+import 'theme/rinde_theme.dart';
+
 void main() {
   runApp(const RentabilidadApp());
 }
@@ -12,11 +15,8 @@ class RentabilidadApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rentabilidad Inteligente',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1B8A5A)),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
+      theme: construirTemaRinde(),
+      home: const SplashPage(siguiente: HomePage()),
     );
   }
 }
